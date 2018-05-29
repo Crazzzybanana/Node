@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 import './CustomNavbar.css';
+import {Link} from 'react-router-dom';
 
 class CustomNavbar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            condition : false
+            condition: false,
+            scrollPosition: 0,
         };
 
         this.handleClick = this.handleClick.bind(this);
+    }
+
+    componentDidMount() {
+        return window.addEventListener('scroll', this.handleScroll)
+    }
+    
+    componentWillUnmount() {
+        return window.removeEventListener('scroll', this.handleScroll)
+    }
+
+    handleScroll = () => {
+        const scrollPositionY = +window.scrollY
+        return this.setState({ scrollPositionY })
     }
 
     handleClick(){
@@ -19,10 +33,11 @@ class CustomNavbar extends Component {
     }
 
     render() {
+        const isScrolling = !!this.state.scrollPositionY
         return (
             <div className="wrapper">
                 <header>
-                    <nav>
+                    <nav className={isScrolling? "black" : null}>
                         <div className="menu-icon">
                             <i className="fa fa-bars fa-2x" onClick={this.handleClick}></i>
                         </div>
@@ -39,21 +54,6 @@ class CustomNavbar extends Component {
                     </nav>
                 </header>
             </div>
-            // <Navbar default collapseOnSelect>
-            //     <Navbar.Header>
-            //         <Navbar.Brand>
-            //             <Link href="/" to="/">Account Manager</Link>
-            //         </Navbar.Brand>
-            //     </Navbar.Header>
-            //     <Nav pullRight>
-            //         <NavItem eventKey={1} componentClass={Link} href="/about" to="/about">
-            //             About
-            //         </NavItem>
-            //         <NavItem className="profN" eventKey={2} componentClass={Link} href="/profile" to="/profile">
-            //             <span className="profS">Profile</span>
-            //         </NavItem>
-            //     </Nav>
-            // </Navbar>
         );
     }
 }
