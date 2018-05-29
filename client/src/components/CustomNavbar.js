@@ -42,11 +42,11 @@ class CustomNavbar extends Component {
                             <i className="fa fa-bars fa-2x" onClick={this.handleClick}></i>
                         </div>
                         <div className="logo">
-                            Account Manager
+                            {/* Account Manager */}
+                            <Link className="logoLink" href="/" to="/">Account Manager</Link>
                         </div>
                         <div className="menu">
                             <ul className={this.state.condition? "showing" : null}>
-                                <li><Link href="/" to="/">Home</Link></li>
                                 <li><Link href="/about" to="/about">About</Link></li>
                                 <li><Link href="/profile" to="/profile">Profile</Link></li>
                             </ul>
