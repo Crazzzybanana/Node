@@ -1,0 +1,48 @@
+.footerContact{
+    width: 50%;
+    float: left;
+    font-size: 23px;
+    text-align: center;
+    background: rgb(21, 20, 20);
+    color: #fff;
+}
+
+.footerAbout{
+    width: 50%;
+    float: right;
+    background: rgb(21, 20, 20);
+    color: #fff;
+}
+
+.footerAbout div{
+    text-align: center;
+}
+
+.footerAbout div p{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.footerContact div{
+    margin: 10px;
+}
+
+.footerContact div a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: normal;
+}
+
+.tLink{
+    margin-left: 20px;
+}
+
+.tbLink{
+    margin-left: 30px;
+    margin-right: 25px;
+}
+
+.eLink{
+    margin-left: 26px;
+    margin-right: 19px;
+}

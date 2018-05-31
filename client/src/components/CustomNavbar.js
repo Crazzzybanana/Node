@@ -42,7 +42,6 @@ class CustomNavbar extends Component {
                             <i className="fa fa-bars fa-2x" onClick={this.handleClick}></i>
                         </div>
                         <div className="logo">
-                            {/* Account Manager */}
                             <Link className="logoLink" href="/" to="/">Account Manager</Link>
                         </div>
                         <div className="menu">
