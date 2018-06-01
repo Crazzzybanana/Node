@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './CustomNavbar.css';
 import {Link} from 'react-router-dom';
+import Logo from './assets/logo.png';
 
 class CustomNavbar extends Component {
     constructor(props) {
@@ -42,12 +43,14 @@ class CustomNavbar extends Component {
                             <i className="fa fa-bars fa-2x" onClick={this.handleClick}></i>
                         </div>
                         <div className="logo">
-                            <Link className="logoLink" href="/" to="/">Account Manager</Link>
+                            <Link className="logoLink" href="/" to="/"><img src={Logo} alt="logo"/></Link>
                         </div>
                         <div className="menu">
                             <ul className={this.state.condition? "showing" : null}>
                                 <li><Link href="/about" to="/about">About</Link></li>
+                                <li><Link href="/profile" to="/profile">Shop</Link></li>
                                 <li><Link href="/profile" to="/profile">Profile</Link></li>
+                                <li><Link href="/profile" to="/profile">Register/LogIn</Link></li>
                             </ul>
                         </div>
                     </nav>
