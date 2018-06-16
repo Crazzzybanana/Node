@@ -1,0 +1,11 @@
+{
+  "name": "TBot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.30.0",
+    "nodemon": "^1.17.5",
+    "request": "^2.87.0"
+  }
+}
